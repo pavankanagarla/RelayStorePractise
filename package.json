@@ -21,7 +21,6 @@
     "prettier": "prettier \"**/*.+(js|jsx|json|css|scss|graphql)\"",
     "format": "npm run prettier -- --write ",
     "validate": "npm run lint && npm run test && npm run format && npm run flow",
-    "precommit": "lint-staged && npm run flow",
     "relay": "relay-compiler --watchman false --src ./src --schema ./schema.graphql"
   },
   "devDependencies": {
