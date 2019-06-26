@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import VerifyOTPMutation from './VerifyOTPMutation'
 
 function App() {
+  let[Mobilenumber,setmobilenumer] = useState()
+  const verifyLogin = () => {
+    VerifyOTPMutation(Mobilenumber)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        Mobile number: <input type="text" name="Mobile number" placeholder="Mobile number" onKeyDown={event => setmobilenumer(event.target.value)}/>
+        <input type="submit" value="Submit" onClick={() => verifyLogin()}/>
     </div>
   );
 }

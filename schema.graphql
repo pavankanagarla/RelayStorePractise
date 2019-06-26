@@ -1,0 +1,1513 @@
+"""Type Definition of Activity"""
+type Activity implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """UserGuid"""
+  UserGuid: String
+
+  """ActivityGuid"""
+  ActivityGuid: String
+
+  """Activity"""
+  Activity: String
+
+  """ChildUserActivities"""
+  ChildUserActivities: String
+
+  """NotPartOfParent"""
+  NotPartOfParent: Int
+
+  """UserGuidTrimmed"""
+  UserGuidTrimmed: String
+
+  """ActivityName"""
+  ActivityName: String
+
+  """ActivityType"""
+  ActivityType: String
+
+  """ActivityTypeGuid"""
+  ActivityTypeGuid: String
+
+  """ActivityDescription"""
+  ActivityDescription: String
+
+  """ActivityThemeCode"""
+  ActivityThemeCode: String
+
+  """ActivityIcon"""
+  ActivityIcon: String
+
+  """IsInvitation"""
+  IsInvitation: String
+
+  """IsSingleInstance"""
+  IsSingleInstance: String
+
+  """IsSingleChoice"""
+  IsSingleChoice: String
+
+  """ExecutorGuid"""
+  ExecutorGuid: String
+
+  """ExecutorName"""
+  ExecutorName: String
+
+  """UserType"""
+  UserType: String
+
+  """ParticipantCount"""
+  ParticipantCount: Int
+
+  """ResponseCount"""
+  ResponseCount: Int
+
+  """ETA"""
+  ETA: String
+
+  """StartDate"""
+  StartDate: String
+
+  """EndDate"""
+  EndDate: String
+
+  """OwnerGuid"""
+  OwnerGuid: String
+
+  """OwnerName"""
+  OwnerName: String
+
+  """OwnerPhoneNumber"""
+  OwnerPhoneNumber: String
+
+  """CreatorGuid"""
+  CreatorGuid: String
+
+  """UnReadMessages"""
+  UnReadMessages: Int
+
+  """LastMessage"""
+  LastMessage: String
+
+  """AttachmentType"""
+  AttachmentType: String
+
+  """LastMessageTime"""
+  LastMessageTime: String
+
+  """LastMessageBy"""
+  LastMessageBy: String
+
+  """LastMessageSenderId"""
+  LastMessageSenderId: String
+
+  """IsActivityModified"""
+  IsActivityModified: String
+
+  """IsActivityDetailUpdated"""
+  IsActivityDetailUpdated: String
+
+  """MessageCriticality"""
+  MessageCriticality: Int
+
+  """ActivityCurrentStatus"""
+  ActivityCurrentStatus: String
+
+  """Option1ColorCode"""
+  Option1ColorCode: String
+
+  """Option2ColorCode"""
+  Option2ColorCode: String
+
+  """Option3ColorCode"""
+  Option3ColorCode: String
+
+  """Option4ColorCode"""
+  Option4ColorCode: String
+
+  """Option5ColorCode"""
+  Option5ColorCode: String
+
+  """Option1Value"""
+  Option1Value: Int
+
+  """Option2Value"""
+  Option2Value: Int
+
+  """Option3Value"""
+  Option3Value: Int
+
+  """Option4Value"""
+  Option4Value: Int
+
+  """Option5Value"""
+  Option5Value: Int
+
+  """Option1Name"""
+  Option1Name: String
+
+  """Option2Name"""
+  Option2Name: String
+
+  """Option3Name"""
+  Option3Name: String
+
+  """Option4Name"""
+  Option4Name: String
+
+  """Option5Name"""
+  Option5Name: String
+
+  """IsBusinessActivity"""
+  IsBusinessActivity: String
+
+  """SubActivityStatusDetails"""
+  SubActivityStatusDetails: String
+
+  """SubActivitiesCount"""
+  SubActivitiesCount: Int
+
+  """TimeStampLong"""
+  TimeStampLong: String
+
+  """LastWriteTimeTicks"""
+  LastWriteTimeTicks: String
+
+  """CompletedBy"""
+  CompletedBy: String
+
+  """CompletedTime"""
+  CompletedTime: String
+
+  """CreatedTime"""
+  CreatedTime: String
+
+  """IndexPosition"""
+  IndexPosition: Int
+
+  """ParentTemplateId"""
+  ParentTemplateId: String
+
+  """IsHomeScreenActivity"""
+  IsHomeScreenActivity: String
+
+  """IsPinnedActivity"""
+  IsPinnedActivity: String
+
+  """IsNotificationDisabled"""
+  IsNotificationDisabled: String
+
+  """UnReadMsgsInChild"""
+  UnReadMsgsInChild: Int
+
+  """OwnerInfo"""
+  OwnerInfo: String
+
+  """ParentObserverIDs"""
+  ParentObserverIDs: String
+
+  """HeaderMetadata"""
+  HeaderMetadata: String
+
+  """Tags"""
+  Tags: String
+
+  """State"""
+  State: String
+
+  """AssignedTo"""
+  AssignedTo: String
+
+  """DueDate"""
+  DueDate: String
+
+  """Data1Value"""
+  Data1Value: String
+
+  """Data2Value"""
+  Data2Value: String
+
+  """Data3Value"""
+  Data3Value: String
+
+  """ActivityInstanceType"""
+  ActivityInstanceType: String
+
+  """NotificationSettings"""
+  NotificationSettings: String
+
+  """ParentActivityGuid"""
+  ParentActivityGuid: String
+
+  """IsArchived"""
+  IsArchived: String
+
+  """Delivered"""
+  Delivered: String
+
+  """Read"""
+  Read: String
+
+  """VersionNumber"""
+  VersionNumber: String
+
+  """DeviceType"""
+  DeviceType: String
+
+  """IsMultiton"""
+  IsMultiton: String
+
+  """IsNewActivity"""
+  IsNewActivity: String
+
+  """Location"""
+  Location: String
+
+  """SubTaskPairs"""
+  SubTaskPairs: String
+
+  """MultitonData"""
+  MultitonData: String
+
+  """PartitionKey"""
+  PartitionKey: String
+
+  """RowKey"""
+  RowKey: String
+
+  """Timestamp"""
+  Timestamp: String
+
+  """ETag"""
+  ETag: String
+}
+
+"""A connection to a list of items."""
+type ActivityConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [ActivityEdge]
+}
+
+"""An edge in a connection."""
+type ActivityEdge {
+  """The item at the end of the edge"""
+  node: Activity
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""Type Definition of Activity message"""
+type ActivityMessage implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """ActivityGuid"""
+  ActivityGuid: String
+
+  """MessageTime"""
+  MessageTime: String
+
+  """MessageFrom"""
+  MessageFrom: String
+
+  """SenderId"""
+  SenderId: String
+
+  """MessageBody"""
+  MessageBody: String
+
+  """MessageStatus"""
+  MessageStatus: String
+
+  """MessageType"""
+  MessageType: String
+
+  """AttachmentType"""
+  AttachmentType: String
+
+  """MediaPath"""
+  MediaPath: String
+
+  """Option1Name"""
+  Option1Name: String
+
+  """Option1Value"""
+  Option1Value: String
+
+  """IsSystemMessage"""
+  IsSystemMessage: String
+
+  """Delivered"""
+  Delivered: String
+
+  """Read"""
+  Read: String
+
+  """MessageLastUpdated"""
+  MessageLastUpdated: String
+
+  """PartitionKey"""
+  PartitionKey: String
+
+  """RowKey"""
+  RowKey: String
+
+  """Timestamp"""
+  Timestamp: String
+}
+
+"""Type Definition for GetContacts"""
+type ActivityParticipants {
+  """Status"""
+  Status: String
+
+  """Response"""
+  Response(after: String, first: Int, before: String, last: Int): AllParticipantsConnection!
+}
+
+"""Type Definition for AllParticipants of activity"""
+type AllParticipants {
+  """The ID of an object"""
+  id: ID!
+
+  """PartitionKey"""
+  PartitionKey: String
+
+  """RowKey"""
+  RowKey: String
+
+  """TimeStamp"""
+  TimeStamp: String
+
+  """ActivityGuid"""
+  ActivityGuid: String
+
+  """IsAdmin"""
+  IsAdmin: Boolean
+
+  """UserGuid"""
+  UserGuid: String
+
+  """UserGuidTrimmed"""
+  UserGuidTrimmed: String
+
+  """IsInvitation"""
+  IsInvitation: Boolean
+
+  """IsParticipant"""
+  IsParticipant: Boolean
+
+  """LastWriteTimeTicks"""
+  LastWriteTimeTicks: String
+
+  """UserType"""
+  UserType: String
+
+  """ChoiceQuestionAnswered"""
+  ChoiceQuestionAnswered: Boolean
+
+  """Data1Value"""
+  Data1Value: String
+
+  """Data2Value"""
+  Data2Value: String
+
+  """Data3Value"""
+  Data3Value: String
+
+  """Data4Value"""
+  Data4Value: String
+
+  """Data5Value"""
+  Data5Value: String
+
+  """IsCommunity"""
+  IsCommunity: Boolean
+
+  """IsInherited"""
+  IsInherited: Boolean
+
+  """IsModified"""
+  IsModified: Boolean
+
+  """IsSpecialInvitation"""
+  IsSpecialInvitation: Boolean
+
+  """Option1Value"""
+  Option1Value: Int
+
+  """Option2Value"""
+  Option2Value: Int
+
+  """Option3Value"""
+  Option3Value: Int
+
+  """Option4Value"""
+  Option4Value: Int
+
+  """Option5Value"""
+  Option5Value: Int
+
+  """PhoneNumber"""
+  PhoneNumber: String
+
+  """CommunityGuid"""
+  CommunityGuid: String
+
+  """RegistrationType"""
+  RegistrationType: String
+
+  """NickName"""
+  NickName: String
+
+  """OwnerGuid"""
+  OwnerGuid: String
+
+  """Answer"""
+  Answer: String
+
+  """ETag"""
+  ETag: String
+}
+
+"""A connection to a list of items."""
+type AllParticipantsConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [AllParticipantsEdge]
+}
+
+"""An edge in a connection."""
+type AllParticipantsEdge {
+  """The item at the end of the edge"""
+  node: AllParticipants
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""Response of Phone Auth"""
+type AuthResponse {
+  """Status code the API"""
+  StatusCode: Int
+
+  """IsSuccessStatusCode"""
+  IsSuccessStatusCode: Boolean
+}
+
+input ConfirmActivityInvitationInput {
+  """Encrypted Data"""
+  data: String!
+
+  """Token"""
+  token: String!
+  clientMutationId: String
+}
+
+type ConfirmActivityInvitationPayload {
+  ActivityInvitation: Invitationresponse
+  clientMutationId: String
+}
+
+input ConfirmRegistrationInput {
+  """DeviceId"""
+  DeviceId: String!
+
+  """Email"""
+  EmailAddress: String!
+
+  """Id"""
+  Id: String!
+
+  """LoginId"""
+  LoginId: String!
+
+  """Logo"""
+  Logo: String
+
+  """Name"""
+  NickName: String!
+
+  """OrganisationId"""
+  OrganisationId: String
+
+  """Organization"""
+  OrganizationName: String!
+
+  """PersonalStatus"""
+  PersonalStatus: String
+
+  """PhoneNumber"""
+  PhoneNumber: String!
+
+  """ProfilePic"""
+  ProfilePic: String
+
+  """ShowUpcomingEvents"""
+  ShowUpcomingEvents: Boolean!
+
+  """UniqueId"""
+  UniqueId: String!
+
+  """Token """
+  token: String!
+  clientMutationId: String
+}
+
+type ConfirmRegistrationPayload {
+  NewUserRegister: UserRegistration
+  clientMutationId: String
+}
+
+"""Type Definition for Contact"""
+type Contact {
+  """The ID of an object"""
+  id: ID!
+
+  """UserGuid"""
+  UserGuid: String
+
+  """PhoneNumber"""
+  PhoneNumber: String
+
+  """PartitionKey"""
+  PartitionKey: String
+
+  """ProfilePicture"""
+  ProfilePicture: String
+
+  """PersonalStatus"""
+  PersonalStatus: String
+
+  """NickName"""
+  NickName: String
+
+  """IsLocal"""
+  IsLocal: Boolean
+
+  """CountryCode"""
+  CountryCode: String
+
+  """DeviceId"""
+  DeviceId: String
+
+  """OrganizationName"""
+  OrganizationName: String
+
+  """EmailAddress"""
+  EmailAddress: String
+
+  """LastWriteTimeTicks"""
+  LastWriteTimeTicks: String
+}
+
+"""A connection to a list of items."""
+type ContactConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [ContactEdge]
+}
+
+"""An edge in a connection."""
+type ContactEdge {
+  """The item at the end of the edge"""
+  node: Contact
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""Type Definition of Activity message"""
+type customeActivityMessage {
+  cursor: String
+  node: ActivityMessage
+}
+
+"""Response of GetAcitivityDetailsResponse"""
+type GetAcitivityDetailsResponse {
+  """ActivityBasicInfo"""
+  ActivityBasicInfo: Activity
+
+  """Notes"""
+  Notes(after: String, first: Int, before: String, last: Int): ActivityConnection!
+
+  """Questions"""
+  Questions(after: String, first: Int, before: String, last: Int): ActivityConnection!
+
+  """ActivityUserDetailInfo"""
+  ActivityUserDetailInfo: AllParticipants
+
+  """ChildUserActivities"""
+  ChildUserActivities(after: String, first: Int, before: String, last: Int): ActivityConnection
+
+  """SubTasks"""
+  SubTasks(after: String, first: Int, before: String, last: Int): ActivityConnection!
+
+  """Participants"""
+  Participants(after: String, first: Int, before: String, last: Int): AllParticipantsConnection!
+
+  """Submissions"""
+  Submissions(after: String, first: Int, before: String, last: Int): ActivityConnection!
+
+  """ActivityLastReadTimeTicks"""
+  ActivityLastReadTimeTicks: String
+}
+
+"""Type Definition for GetActivityDetails"""
+type GetActivityDetails {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: GetAcitivityDetailsResponse
+}
+
+"""Get Activity Message Response In Detail"""
+type GetActivityMessageResponseDetailed {
+  activityMessages(after: String, first: Int, before: String, last: Int): [customeActivityMessage]
+
+  """ResponseTimeTicks"""
+  ResponseTimeTicks: String
+}
+
+input GetActivityMessagesRequestInput {
+  """activity Guid"""
+  activityGuid: String!
+
+  """last Chat Read Time"""
+  lastChatReadTime: Int
+
+  """no Of Records Per Page"""
+  noOfRecordsPerPage: String
+
+  """token"""
+  token: String!
+  clientMutationId: String
+}
+
+type GetActivityMessagesRequestPayload {
+  result: GetActivityMessagesResponse
+  clientMutationId: String
+}
+
+"""API is used to receive message based on activity"""
+type GetActivityMessagesResponse {
+  """Status"""
+  Status: String
+
+  """Get Detailed response"""
+  Response: GetActivityMessageResponseDetailed
+}
+
+"""Type Definition for GetContacts"""
+type GetContacts {
+  """Status"""
+  Status: String
+
+  """Response"""
+  Response(after: String, first: Int, before: String, last: Int): ContactConnection!
+}
+
+input GetDetailsChangedInput {
+  """Encrypted Data"""
+  data: String!
+
+  """Token """
+  token: String!
+  clientMutationId: String
+}
+
+type GetDetailsChangedPayload {
+  ActivityDetails: GetActivityDetails
+  clientMutationId: String
+}
+
+input GetTokenInput {
+  """User Id"""
+  UserId: String!
+
+  """Device Id"""
+  DeviceUniqueID: String!
+
+  """Token """
+  Token: String!
+  clientMutationId: String
+}
+
+type GetTokenPayload {
+  token: Token
+  clientMutationId: String
+}
+
+"""Type Definition for GetZibMiUsers"""
+type GetZibMiUsers {
+  """Response"""
+  Response(after: String, first: Int, before: String, last: Int): ContactConnection!
+}
+
+"""API is used to accept activity"""
+type Invitationresponse {
+  """Status"""
+  Status: String
+}
+
+"""Type Definition for LoadMenu"""
+type LoadMenu {
+  """Status"""
+  Status: String
+
+  """Menu Response"""
+  Response: LoadMenuResponse
+}
+
+"""Type Definition of LoadMenuActivities"""
+type LoadMenuActivities implements Node {
+  """The ID of an object"""
+  id: ID!
+
+  """ActivityTypeGuid"""
+  ActivityTypeGuid: String
+
+  """Name"""
+  Name: String
+
+  """Label"""
+  Label: String
+
+  """BaseActivityTypeGuid"""
+  BaseActivityTypeGuid: String
+
+  """Icon"""
+  Icon: String
+
+  """Color"""
+  Color: String
+
+  """AccessType"""
+  AccessType: String
+
+  """TemplateType"""
+  TemplateType: String
+
+  """Children"""
+  Children: String
+
+  """RecordType"""
+  RecordType: String
+
+  """Filter"""
+  Filter: String
+
+  """IsVisible"""
+  IsVisible: Boolean
+
+  """IsHomeScreen"""
+  IsHomeScreen: Boolean
+
+  """IsContainer"""
+  IsContainer: Boolean
+
+  """IsMultiton"""
+  IsMultiton: Boolean
+
+  """IsParticipantCanAddActivity"""
+  IsParticipantCanAddActivity: Boolean
+
+  """AllowBreadCrum"""
+  AllowBreadCrum: Boolean
+
+  """AllowAggregates"""
+  AllowAggregates: Boolean
+
+  """AllowChildLevelNotifications"""
+  AllowChildLevelNotifications: Boolean
+
+  """AddChildLevelParticipantToParent"""
+  AddChildLevelParticipantToParent: Boolean
+
+  """ShowContacts"""
+  ShowContacts: Boolean
+
+  """IsFeedback"""
+  IsFeedback: Boolean
+
+  """CopyParentStateToChild"""
+  CopyParentStateToChild: Boolean
+
+  """NotificationSettings"""
+  NotificationSettings: String
+
+  """HelpScreen"""
+  HelpScreen: String
+
+  """Properties"""
+  Properties: String
+
+  """SampleActivityGuid"""
+  SampleActivityGuid: String
+
+  """UsersCount"""
+  UsersCount: Int
+
+  """HeaderTemplate"""
+  HeaderTemplate: String
+
+  """ParentTemplate"""
+  ParentTemplate: String
+
+  """Order"""
+  Order: Int
+
+  """BaseTemplateGuid"""
+  BaseTemplateGuid: String
+
+  """IsAddedToUser"""
+  IsAddedToUser: String
+
+  """State"""
+  State: String
+
+  """Category"""
+  Category: String
+
+  """Configuration"""
+  Configuration: String
+
+  """ActionType"""
+  ActionType: String
+
+  """ActionUpon"""
+  ActionUpon: String
+
+  """ConditionOn"""
+  ConditionOn: String
+
+  """ConditionType"""
+  ConditionType: String
+
+  """TargetAddress"""
+  TargetAddress: String
+
+  """TargetValue"""
+  TargetValue: String
+
+  """DefaultData"""
+  DefaultData: String
+
+  """OwnerGuid"""
+  OwnerGuid: String
+
+  """DisplayName"""
+  DisplayName: String
+
+  """IsMetaData"""
+  IsMetaData: String
+
+  """MetaDataFiled"""
+  MetaDataFiled: String
+
+  """UIComponent"""
+  UIComponent: String
+
+  """DefaultChildren"""
+  DefaultChildren: String
+
+  """ActivitySelectorGuid"""
+  ActivitySelectorGuid: String
+
+  """MetaData"""
+  MetaData: String
+
+  """CopyNo"""
+  CopyNo: Int
+
+  """PartitionKey"""
+  PartitionKey: String
+
+  """RowKey"""
+  RowKey: String
+
+  """Timestamp"""
+  Timestamp: String
+
+  """ETag"""
+  ETag: String
+}
+
+"""A connection to a list of items."""
+type LoadMenuActivitiesConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [LoadMenuActivitiesEdge]
+}
+
+"""An edge in a connection."""
+type LoadMenuActivitiesEdge {
+  """The item at the end of the edge"""
+  node: LoadMenuActivities
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""Type Definition for LoadMenuResponse"""
+type LoadMenuResponse {
+  """MenuItems"""
+  MenuItems(after: String, first: Int, before: String, last: Int): LoadMenuActivitiesConnection!
+}
+
+input MessageReadRequestInput {
+  """activity Guid"""
+  ActivityGuid: String
+
+  """Message Time"""
+  MessageTime: String
+
+  """token"""
+  token: String
+  clientMutationId: String
+}
+
+type MessageReadRequestPayload {
+  result: MessageReadResponse
+  clientMutationId: String
+}
+
+"""Message read response"""
+type MessageReadResponse {
+  """SendMessage Status"""
+  Status: String
+
+  """SendMessage Response"""
+  Response: Boolean
+}
+
+"""Mutation Interface for the Service Layer"""
+type Mutation {
+  getToken(input: GetTokenInput!): GetTokenPayload
+  phoneAuthentication(input: PhoneAuthenticationInput!): PhoneAuthenticationPayload
+
+  """Verify the OTP entered by the User"""
+  verifyOTP(input: OTPVerificationInput!): OTPVerificationPayload
+  profileUpdate(input: ProfileUpdateInput!): ProfileUpdatePayload
+  sendMessage(input: sendMessageInput!): sendMessagePayload
+  getActivityMessagesRequest(input: GetActivityMessagesRequestInput!): GetActivityMessagesRequestPayload
+  messageReadRequest(input: MessageReadRequestInput!): MessageReadRequestPayload
+  setReadMessageCountRequest(input: SetReadMessageCountRequestInput!): SetReadMessageCountRequestPayload
+  confirmActivity(input: ConfirmActivityInvitationInput!): ConfirmActivityInvitationPayload
+  zibMiUsers(input: ZibMiUsersInput!): ZibMiUsersPayload
+  ActivityParticipants(input: ParticipantsInput!): ParticipantsPayload
+  persistData(input: PersistDataInput!): PersistDataPayload
+  getActivityDetailsChanged(input: GetDetailsChangedInput!): GetDetailsChangedPayload
+
+  """Confirm the registration of the new user"""
+  confirmUserRegistration(input: ConfirmRegistrationInput!): ConfirmRegistrationPayload
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+input OTPVerificationInput {
+  """DeviceType"""
+  DeviceType: String!
+
+  """DeviceUniqueID"""
+  DeviceUniqueID: String!
+
+  """PhoneNumber"""
+  PhoneNumber: String!
+
+  """Token"""
+  Token: String!
+
+  """Otp"""
+  Otp: String!
+
+  """CountryCode"""
+  CountryCode: String!
+
+  """NotificationMode"""
+  NotificationMode: String!
+  clientMutationId: String
+}
+
+type OTPVerificationPayload {
+  verifyOTP: VerifyOTP
+  clientMutationId: String
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+input ParticipantsInput {
+  """Email Address of the User"""
+  ActivityGuid: String!
+
+  """Name of the Acitivity"""
+  ActivityName: String!
+
+  """Type of the Activity"""
+  ActivityType: String!
+
+  """ActivityTypeGuid"""
+  ActivityTypeGuid: String!
+
+  """IsActivityConfirmed"""
+  IsActivityConfirmed: Boolean!
+
+  """Archived activity"""
+  IsArchived: Boolean!
+
+  """UserGuid of the User"""
+  UserGuid: String!
+
+  """UserType"""
+  UserType: String!
+
+  """ParentActivityGuid"""
+  ParentActivityGuid: String!
+
+  """includes UserInfo"""
+  includeUserInfo: Boolean!
+
+  """lastReadTimeInTicsof the User"""
+  lastReadTimeInTics: Int!
+  clientMutationId: String
+}
+
+type ParticipantsPayload {
+  participants: ActivityParticipants
+  clientMutationId: String
+}
+
+"""Type Definition for Authentication Persist"""
+type Persist {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: PersistResponse
+
+  """WriteTimeTicks"""
+  WriteTimeTicks: String
+}
+
+input PersistDataInput {
+  """Encrypted Data"""
+  data: String!
+
+  """Token """
+  token: String!
+  clientMutationId: String
+}
+
+type PersistDataPayload {
+  Persist: Persist
+  clientMutationId: String
+}
+
+"""Response of PersistActivity"""
+type PersistResponse {
+  """Status code the API"""
+  result: Boolean
+
+  """IsSuccessStatusCode"""
+  ActivityGuid: String
+}
+
+"""Authentication"""
+type PhoneAuth {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: AuthResponse
+}
+
+input PhoneAuthenticationInput {
+  """User Phone Number"""
+  number: String!
+
+  """User Country Code"""
+  countryCode: String!
+  clientMutationId: String
+}
+
+type PhoneAuthenticationPayload {
+  phoneAuth: PhoneAuth
+  clientMutationId: String
+}
+
+"""Response of the Profile Screen"""
+type ProfileResponse {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: Boolean
+}
+
+input ProfileUpdateInput {
+  """Email Address of the User"""
+  EmailAddress: String!
+
+  """Nick Name of the User"""
+  NickName: String!
+
+  """Organization Name of the User"""
+  OrganizationName: String!
+
+  """Phone Number of the User"""
+  PhoneNumber: String!
+
+  """Unique Id to identify the User"""
+  UserGuid: String!
+
+  """Personal Status of the User"""
+  PersonalStatus: String!
+
+  """Profile Picture of the User"""
+  ProfilePicture: String!
+  clientMutationId: String
+}
+
+type ProfileUpdatePayload {
+  profile: ProfileResponse
+  clientMutationId: String
+}
+
+"""Query Interface"""
+type Query {
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+
+  """Viewer pattern Implementation"""
+  viewer: Viewer!
+}
+
+"""Response of the User Registration"""
+type RegistrationResponse {
+  """UserId"""
+  secret: String
+
+  """MenuItems"""
+  MenuItems(after: String, first: Int, before: String, last: Int): LoadMenuActivitiesConnection!
+}
+
+"""API is used to send message"""
+type SendMessage {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: Boolean
+
+  """MessageTime"""
+  MessageTime: String
+
+  """RequestIdentifier"""
+  RequestIdentifier: String
+}
+
+input sendMessageInput {
+  """Activity Guid"""
+  ActivityGuid: String!
+
+  """Attachment Properties"""
+  AttachmentProperties: String
+
+  """AttachmentType"""
+  AttachmentType: String!
+
+  """ChatItemPosition"""
+  ChatItemPosition: Int!
+
+  """Delivered"""
+  Delivered: String
+
+  """Delivered"""
+  DeliveredNotified: Int!
+
+  """IsMessagePersistanceRequired"""
+  IsMessagePersistanceRequired: Int!
+
+  """IsNotificationMessage"""
+  IsNotificationMessage: Int!
+
+  """IsSystemMessage"""
+  IsSystemMessage: Int!
+
+  """LastMessageUpdatedTime"""
+  LastMessageUpdatedTime: String!
+
+  """LocalMediaPath"""
+  LocalMediaPath: String
+
+  """MediaPath"""
+  MediaPath: String
+
+  """MediaUploadStatus"""
+  MediaUploadStatus: Int!
+
+  """MessageBody"""
+  MessageBody: String!
+
+  """MessageSenderId"""
+  MessageSenderId: String!
+
+  """MessageSenderName"""
+  MessageSenderName: String!
+
+  """MessageTime"""
+  MessageTime: String!
+
+  """MessageType"""
+  MessageType: String!
+
+  """Option1Name"""
+  Option1Name: String
+
+  """Option1Value"""
+  Option1Value: String
+
+  """ParentActivityGuid"""
+  ParentActivityGuid: String!
+
+  """Read"""
+  Read: String
+
+  """ReadNotified"""
+  ReadNotified: Int!
+
+  """token"""
+  token: String!
+  clientMutationId: String
+}
+
+type sendMessagePayload {
+  result: SendMessage
+  clientMutationId: String
+}
+
+"""Set Read message count"""
+type SetReadMessageCount {
+  """SetReadMessageCount Status"""
+  Status: String
+
+  """SetReadMessageCount Response"""
+  Response: String
+}
+
+input SetReadMessageCountRequestInput {
+  """activity Guid"""
+  ActivityGuid: String
+
+  """ParentActivity Guid"""
+  ParentActivityGuid: String
+
+  """SenderId"""
+  SenderId: String
+
+  """token"""
+  token: String
+  clientMutationId: String
+}
+
+type SetReadMessageCountRequestPayload {
+  result: SetReadMessageCount
+  clientMutationId: String
+}
+
+"""Type Definition for Authentication Token"""
+type Token {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: String
+}
+
+"""To Confirm the user Registration"""
+type UserRegistration {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: RegistrationResponse
+}
+
+"""API to Verify the OTP"""
+type VerifyOTP {
+  """Status of the API"""
+  Status: String
+
+  """Response of the API"""
+  Response: VerifyResponse
+}
+
+"""Response of the Verify OTP API"""
+type VerifyResponse {
+  """UserId"""
+  UserId: String
+
+  """UserGuid"""
+  UserGuid: String
+
+  """PhoneNumber"""
+  PhoneNumber: String
+
+  """LoginId"""
+  LoginId: String
+
+  """Token"""
+  Token: String
+
+  """DeviceGuid"""
+  DeviceGuid: String
+
+  """NickName"""
+  NickName: String
+
+  """Address"""
+  Address: String
+
+  """LandMark"""
+  LandMark: String
+
+  """City"""
+  City: String
+
+  """State"""
+  State: String
+
+  """Country"""
+  Country: String
+
+  """PinCode"""
+  PinCode: String
+
+  """VerifiedUser"""
+  VerifiedUser: String
+
+  """EmailAddress"""
+  EmailAddress: String
+
+  """ProfilePicture"""
+  ProfilePicture: String
+
+  """MinOrder"""
+  MinOrder: String
+
+  """StoreTime"""
+  StoreTime: String
+
+  """OrganizationName"""
+  OrganizationName: String
+
+  """PersonalStatus"""
+  PersonalStatus: String
+
+  """ShowUpcomingEvents"""
+  ShowUpcomingEvents: String
+}
+
+type Viewer {
+  """Get X-Wall"""
+  getXwall(
+    """Last Read Time of the Activity"""
+    lastReadTimeInTics: Int!
+
+    """Token for Authentication"""
+    token: String!
+  ): Xwall
+
+  """Get Contacts"""
+  getContacts(
+    """Token for Authentication"""
+    token: String!
+  ): GetContacts
+
+  """Get Menu"""
+  getMenu(
+    """Token for Authentication"""
+    token: String!
+  ): LoadMenu
+  id: ID!
+}
+
+"""Type Definition for XWall"""
+type Xwall {
+  """Status"""
+  Status: String
+
+  """Xwall Response"""
+  Response: XWallResponse
+}
+
+"""Type Definition for XWall Response"""
+type XWallResponse {
+  """UserActivities"""
+  UserActivities(after: String, first: Int, before: String, last: Int): ActivityConnection!
+
+  """ResponseTimeTicks"""
+  ResponseTimeTicks: Int
+
+  """IsFullRefresh"""
+  IsFullRefresh: String
+
+  """StartTime"""
+  StartTime: String
+
+  """EndTime"""
+  EndTime: String
+
+  """CurrentVersionCode"""
+  CurrentVersionCode: String
+
+  """CurrentIOSVersionCode"""
+  CurrentIOSVersionCode: String
+}
+
+input ZibMiUsersInput {
+  """numbers """
+  phoneNumbers: [String]
+
+  """Token """
+  token: String!
+  clientMutationId: String
+}
+
+type ZibMiUsersPayload {
+  zibmicontacts: GetZibMiUsers
+  clientMutationId: String
+}
+
